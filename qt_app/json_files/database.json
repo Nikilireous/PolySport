@@ -1,0 +1,398 @@
+{
+  "teams": [
+    {
+      "team_name": "Manchester United",
+      "city": "Manchester",
+      "year_formed": 1878
+    },
+    {
+      "team_name": "Arsenal",
+      "city": "London",
+      "year_formed": 1886
+    },
+    {
+      "team_name": "Liverpool",
+      "city": "Liverpool",
+      "year_formed": 1892
+    },
+    {
+      "team_name": "Chelsea",
+      "city": "London",
+      "year_formed": 1905
+    }
+  ],
+
+  "team_statistics": [
+    {
+      "team_id": 101,
+      "total_games": 2,
+      "total_wins": 1,
+      "total_losses": 1
+    },
+    {
+      "team_id": 102,
+      "total_games": 2,
+      "total_wins": 0,
+      "total_losses": 2
+    },
+    {
+      "team_id": 103,
+      "total_games": 2,
+      "total_wins": 2,
+      "total_losses": 0
+    },
+    {
+      "team_id": 104,
+      "total_games": 2,
+      "total_wins": 1,
+      "total_losses": 1
+    }
+  ],
+
+    "team_history": [
+      {
+        "team_id": 101,
+        "event_date": "2020-05-15",
+        "event_description": "Won the National Championship."
+      },
+      {
+        "team_id": 102,
+        "event_date": "2019-04-20",
+        "event_description": "Won the State Cup."
+      },
+      {
+        "team_id": 103,
+        "event_date": "2018-10-12",
+        "event_description": "Achieved record attendance at home games."
+      },
+      {
+        "team_id": 104,
+        "event_date": "2017-05-30",
+        "event_description": "Established a partnership with local schools."
+      }
+    ],
+
+      "seasons": [
+      {
+        "year": 2020,
+        "champion_team_id": 1
+      },
+      {
+        "year": 2021,
+        "champion_team_id": 2
+      },
+      {
+        "year": 2022,
+        "champion_team_id": 3
+      },
+      {
+        "year": 2023,
+        "champion_team_id": 4
+      }
+    ],
+
+      "scores": [
+      {
+        "game_id": 1,
+        "judge_id": 201,
+        "team_id": 101,
+        "score": 3
+      },
+      {
+        "game_id": 1,
+        "judge_id": 201,
+        "team_id": 102,
+        "score": 2
+      },
+      {
+        "game_id": 2,
+        "judge_id": 202,
+        "team_id": 102,
+        "score": 1
+      },
+      {
+        "game_id": 2,
+        "judge_id": 202,
+        "team_id": 103,
+        "score": 4
+      },
+      {
+        "game_id": 3,
+        "judge_id": 203,
+        "team_id": 103,
+        "score": 3
+      },
+      {
+        "game_id": 3,
+        "judge_id": 203,
+        "team_id": 104,
+        "score": 2
+      },
+      {
+        "game_id": 4,
+        "judge_id": 203,
+        "team_id": 104,
+        "score": 6
+      },
+      {
+        "game_id": 4,
+        "judge_id": 203,
+        "team_id": 101,
+        "score": 5
+      }
+    ],
+
+      "results": [
+      {
+        "game_id": 1,
+        "team_id": 101,
+        "score": 3
+      },
+      {
+        "game_id": 1,
+        "team_id": 102,
+        "score": 2
+      },
+      {
+        "game_id": 2,
+        "team_id": 102,
+        "score": 1
+      },
+      {
+        "game_id": 2,
+        "team_id": 103,
+        "score": 4
+      },
+      {
+        "game_id": 3,
+        "team_id": 103,
+        "score": 3
+      },
+      {
+        "game_id": 3,
+        "team_id": 104,
+        "score": 2
+      },
+      {
+        "game_id": 4,
+        "team_id": 104,
+        "score": 6
+      },
+      {
+        "game_id": 4,
+        "team_id": 101,
+        "score": 5
+      }
+    ],
+
+    "participants": [
+    {
+      "name": "Alice Johnson",
+      "age": 25,
+      "team_id": 101
+    },
+    {
+      "name": "Bob Smith",
+      "age": 30,
+      "team_id": 101
+    },
+    {
+      "name": "Charlie Brown",
+      "age": 22,
+      "team_id": 101
+    },
+    {
+      "name": "Diana Prince",
+      "age": 28,
+      "team_id": 101
+    },
+    {
+      "name": "Ethan Hunt",
+      "age": 35,
+      "team_id": 101
+    },
+    {
+      "name": "Fiona Gallagher",
+      "age": 27,
+      "team_id": 101
+    },
+    {
+      "name": "George Clark",
+      "age": 24,
+      "team_id": 102
+    },
+    {
+      "name": "Hannah Lee",
+      "age": 29,
+      "team_id": 102
+    },
+    {
+      "name": "Ian Wright",
+      "age": 31,
+      "team_id": 102
+    },
+    {
+      "name": "Julia Roberts",
+      "age": 26,
+      "team_id": 102
+    },
+    {
+      "name": "Kevin Spacey",
+      "age": 33,
+      "team_id": 102
+    },
+    {
+      "name": "Laura Croft",
+      "age": 27,
+      "team_id": 102
+    },
+    {
+      "name": "Mike Tyson",
+      "age": 34,
+      "team_id": 103
+    },
+    {
+      "name": "Nina Simone",
+      "age": 32,
+      "team_id": 103
+    },
+    {
+      "name": "Oscar Wilde",
+      "age": 29,
+      "team_id": 103
+    },
+    {
+      "name": "Paula Abdul",
+      "age": 26,
+      "team_id": 103
+    },
+    {
+      "name": "Quentin Tarantino",
+      "age": 38,
+      "team_id": 103
+    },
+    {
+      "name": "Rita Hayworth",
+      "age": 30,
+      "team_id": 103
+    },
+    {
+      "name": "Sam Smith",
+      "age": 28,
+      "team_id": 104
+    },
+    {
+      "name": "Tina Turner",
+      "age": 35,
+      "team_id": 104
+    },
+    {
+      "name": "Ursula K. Le Guin",
+      "age": 40,
+      "team_id": 104
+    },
+    {
+      "name": "Victor Hugo",
+      "age": 31,
+      "team_id": 104
+    },
+    {
+      "name": "Wanda Sykes",
+      "age": 45,
+      "team_id": 104
+    },
+    {
+      "name": "Xena Warrior",
+      "age": 29,
+      "team_id": 104
+    }
+  ],
+
+      "matches": [
+      {
+        "game_id": 1,
+        "team1_id": 101,
+        "team2_id": 102,
+        "winner_team": 101
+      },
+      {
+        "game_id": 2,
+        "team1_id": 102,
+        "team2_id": 103,
+        "winner_team": 103
+      },
+      {
+        "game_id": 3,
+        "team1_id": 103,
+        "team2_id": 104,
+        "winner_team": 103
+      },
+      {
+        "game_id": 4,
+        "team1_id": 104,
+        "team2_id": 101,
+        "winner_team": 104
+      }
+    ],
+
+      "judges": [
+      {
+        "name": "John Doe",
+        "experience_years": 15
+      },
+      {
+        "name": "Jane Smith",
+        "experience_years": 20
+      },
+      {
+        "name": "Emily Johnson",
+        "experience_years": 10
+      },
+      {
+        "name": "Michael Brown",
+        "experience_years": 25
+      }
+    ],
+
+      "games": [
+      {
+        "game_date": "2024-10-26",
+        "location": "Stadium A"
+      },
+      {
+        "game_date": "2024-10-27",
+        "location": "Stadium B"
+      },
+      {
+        "game_date": "2024-11-01",
+        "location": "Stadium C"
+      },
+      {
+        "game_date": "2024-11-05",
+        "location": "Stadium D"
+      }
+    ],
+
+      "awards": [
+      {
+        "award_name": "Best Player",
+        "season_id": 1
+      },
+      {
+        "award_name": "Top Scorer",
+        "season_id": 1
+      },
+      {
+        "award_name": "Best Team",
+        "season_id": 2
+      },
+      {
+        "award_name": "Best Coach",
+        "season_id": 2
+      },
+      {
+        "award_name": "Most Improved Player",
+        "season_id": 3
+      }
+    ]
+}
