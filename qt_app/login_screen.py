@@ -1,6 +1,7 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 import sys
 from log_window import Ui_MainWindow
+from db_screen import db_screen
 
 
 class login_window(Ui_MainWindow, QtWidgets.QMainWindow):
@@ -12,6 +13,7 @@ class login_window(Ui_MainWindow, QtWidgets.QMainWindow):
 
         self.password = "password"
         self.login = "login"
+        self.second_screen = db_screen()
 
     def setup_btns(self):
         self.submit_btn.clicked.connect(self.submit)
@@ -21,9 +23,11 @@ class login_window(Ui_MainWindow, QtWidgets.QMainWindow):
         text_password = self.password_edit.toPlainText()
 
         if text_login == self.login and text_password == self.password:
-            print(1)
+            self.second_screen.show()
+            self.close()
         else:
-            self.statusBar.showMessage("You are fucking idiot")
+            self.statusBar.showMessage("No no no mister fish, you won't still our db")
+
 
 
 if __name__ == "__main__":

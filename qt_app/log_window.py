@@ -13,7 +13,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(500, 525)
-        MainWindow.setStyleSheet("background-color: rgb(3, 177, 18);")
+        MainWindow.setStyleSheet("background-color: rgb(121,189,143);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayoutWidget = QtWidgets.QWidget(parent=self.centralwidget)
@@ -22,6 +22,7 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
+
         self.password = QtWidgets.QLabel(parent=self.gridLayoutWidget)
         self.password.setMinimumSize(QtCore.QSize(100, 40))
         self.password.setMaximumSize(QtCore.QSize(100, 40))
@@ -30,6 +31,7 @@ class Ui_MainWindow(object):
         self.password.setFont(font)
         self.password.setObjectName("password")
         self.gridLayout.addWidget(self.password, 1, 0, 1, 1)
+
         self.login = QtWidgets.QLabel(parent=self.gridLayoutWidget)
         self.login.setMinimumSize(QtCore.QSize(100, 40))
         self.login.setMaximumSize(QtCore.QSize(100, 40))
@@ -38,18 +40,21 @@ class Ui_MainWindow(object):
         self.login.setFont(font)
         self.login.setObjectName("login")
         self.gridLayout.addWidget(self.login, 0, 0, 1, 1)
+
         self.login_edit = QtWidgets.QTextEdit(parent=self.gridLayoutWidget)
         self.login_edit.setMinimumSize(QtCore.QSize(350, 40))
         self.login_edit.setMaximumSize(QtCore.QSize(350, 40))
-        self.login_edit.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.login_edit.setStyleSheet("background-color: rgb(121,189,143);")
         self.login_edit.setObjectName("login_edit")
         self.gridLayout.addWidget(self.login_edit, 0, 1, 1, 1)
+
         self.password_edit = QtWidgets.QTextEdit(parent=self.gridLayoutWidget)
         self.password_edit.setMinimumSize(QtCore.QSize(350, 40))
         self.password_edit.setMaximumSize(QtCore.QSize(350, 40))
-        self.password_edit.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.password_edit.setStyleSheet("background-color: rgb(121,189,143);")
         self.password_edit.setObjectName("password_edit")
         self.gridLayout.addWidget(self.password_edit, 1, 1, 1, 1)
+
         self.submit_btn = QtWidgets.QPushButton(parent=self.centralwidget)
         self.submit_btn.setGeometry(QtCore.QRect(210, 410, 120, 50))
         font = QtGui.QFont()
@@ -57,6 +62,7 @@ class Ui_MainWindow(object):
         self.submit_btn.setFont(font)
         self.submit_btn.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.submit_btn.setObjectName("submit_btn")
+
         self.Logo_label = QtWidgets.QLabel(parent=self.centralwidget)
         self.Logo_label.setGeometry(QtCore.QRect(2, 2, 500, 100))
         self.Logo_label.setText("")
