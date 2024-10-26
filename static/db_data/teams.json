@@ -1,24 +1,19 @@
 {
-    "teams": [
-      {
-        "team_name": "Manchester United",
-        "city": "Manchester",
-        "year_formed": 1878
-      },
-      {
-        "team_name": "Arsenal",
-        "city": "London",
-        "year_formed": 1886
-      },
-      {
-        "team_name": "Liverpool",
-        "city": "Liverpool",
-        "year_formed": 1892
-      },
-      {
-        "team_name": "Chelsea",
-        "city": "London",
-        "year_formed": 1905
-      }
-    ]
-  }
+  "teams": [
+    {
+      "team_name": "Сборная Санкт-Петербурга",
+      "city": "Санкт-Петербург",
+      "year_formed": 2015
+    },
+    {
+      "team_name": "Женская сборная Санкт-Петербурга",
+      "city": "Санкт-Петербург",
+      "year_formed": 2018
+    },
+    {
+      "team_name": "Сборная Москвы",
+      "city": "Москва",
+      "year_formed": 2017
+    }
+  ]
+}

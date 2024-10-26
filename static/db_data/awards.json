@@ -1,24 +1,24 @@
 {
-    "awards": [
-      {
-        "award_name": "Best Player",
-        "season_id": 1
-      },
-      {
-        "award_name": "Top Scorer",
-        "season_id": 1
-      },
-      {
-        "award_name": "Best Team",
-        "season_id": 2
-      },
-      {
-        "award_name": "Best Coach",
-        "season_id": 2
-      },
-      {
-        "award_name": "Most Improved Player",
-        "season_id": 3
-      }
-    ]
-  }
+  "awards": [
+    {
+      "award_name": "Команда года",
+      "season_id": 1
+    },
+    {
+      "award_name": "Лучший нападающий",
+      "season_id": 1
+    },
+    {
+      "award_name": "Самая популярная команда",
+      "season_id": 2
+    },
+    {
+      "award_name": "Тренер года",
+      "season_id": 2
+    },
+    {
+      "award_name": "Самая быстрорастущая команда",
+      "season_id": 3
+    }
+  ]
+}

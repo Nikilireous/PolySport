@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Посмотреть команду{% endblock %}
+
+{% block content %}
+{% if game is defined %}
+<div class="header">
+	<div class="title-block">
+		<h2>Игра от {{ game['game_date'].strftime('%d.%m.%Y') }}, {{ game['location'] }}</h2>
+	</div>
+
+	<div class="header-content">
+		<div class="content-block" id="sport-page">
+			<div class="title-block">
+				<h3>Проведенные матчи:</h3>
+			</div>
+			{% if matches|length > 0%}
+			{% for match in matches %}
+			<div class="info rounded">
+				<p>Участники: {{ res[match['match_id']]['team1']['team_name'] }}, {{
+					res[match['match_id']]['team2']['team_name'] }}</p>
+				<p>Победитель: {{ res[match['match_id']]['winner_team']['team_name'] }}</p>
+			</div>
+			{% endfor %}
+			{% else %}
+			<div class="info rounded">
+				<div class="text-icon">
+					<p>Данные о матчах в данной игре отсуствуют</p>
+					<ion-icon name="sad-outline"></ion-icon>
+				</div>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% endif %}
+{% endblock %}

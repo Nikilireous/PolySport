@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}Посмотреть команду{% endblock %}
+
+{% block content %}
+{% if team is defined %}
+<div class="header">
+	<div class="title-block">
+		<h2>{{ team['team_name'] }}</h2>
+	</div>
+
+	<div class="header-content">
+		<div class="content-block" id="sport-page">
+			<div class="info rounded">
+				<p>Год основания команды - {{ team['city'] }}</p>
+				<p>Город основания - {{ team['year_formed'] }}</p>
+				<p>Всего игр - {{ statistics['total_games'] }}</p>
+				<p>Всего выигрышей - {{ statistics['total_wins'] }}</p>
+				<p>Всего проигрышей - {{ statistics['total_losses'] }}</p>
+				<p>Занимала чемпионство в годах:
+					{% if champion_season_years|length > 0 %}
+					{% for year in champion_season_years %}
+				<p>{{ year }}</p>
+				{% endfor %}
+				{% else %}
+				<div class="text-icon">
+					<p>Команда пока еще не была чемпионом</p>
+					<ion-icon name="sad-outline"></ion-icon>
+				</div>
+				{% endif %}
+			</div>
+			<div class="info rounded">
+				<p>Чего добилась команда:</p>
+				{% if events|length > 0 %}
+				{% for event in events %}
+				<p>{{ event['event_date'].strftime('%d.%m.%Y')}}: {{ event['event_description'] }}</p>
+				{% endfor %}
+				{% else %}
+				<div class="text-icon">
+					<p>Команда пока еще не участвовала в матчах и событиях</p>
+					<ion-icon name="sad-outline"></ion-icon>
+				</div>
+				{% endif %}
+			</div>
+			<div class="info">
+				<div class="title-block">
+					<h3>Состав команды:</h3>
+				</div>
+				<div class="imgs">
+					{% if participants|length > 0 %}
+					{% for prt in participants %}
+					<div class="img-holder">
+						<img src="{{ url_for('static', filename=prt['photo']) }}" alt="{{ prt['name'] }}">
+						<p>{{ prt['name'] }}</p>
+					</div>
+					{% endfor %}
+					{% else %}
+					<div class="text-icon">
+						<p>Данные об игроках отсуствуют</p>
+						<ion-icon name="sad-outline"></ion-icon>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}
+{% endblock %}

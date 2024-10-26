@@ -3,62 +3,90 @@
 {% block title %}Футбол{% endblock %}
 
 {% block content %}
-	<div class="header">
-		<nav class="second-nav">
-			<div class="line-block">
-				<a href="#teams">Команды</a>
-				<a href="#matches">Матчи</a>
-				<a href="#awards">Награды</a>
-			</div>
-		</nav>
-
-		<div class="title-block">
-			<h2>Футбол</h2>
+<div class="header">
+	<nav class="second-nav">
+		<div class="line-block">
+			<a href="#teams">Команды</a>
+			<a href="#games">Матчи</a>
+			<a href="#awards">Награды</a>
 		</div>
+	</nav>
 
-		<div class="header-content">
-
-			<div class="content-block" id="sport-page">
-				<div class="info rounded" id="teams">
-					<div class="text-icon">
-						<h3>Наши команды</h3>
-						<ion-icon name="basketball-outline"></ion-icon>
-					</div>
-					<ul>
-						<li>Asasasa</li>
-						<li>SDSDSD</li>
-						<li>deadea</li>
-						<li>sdsadawd</li>
-					</ul>
-				</div>
-				<div class="info rounded" id="matches">
-					<div class="text-icon">
-						<h3>Сыгранные матчи</h3>
-						<ion-icon name="checkmark-done-outline"></ion-icon>
-					</div>
-					<ul>
-						<li>Asasasa</li>
-						<li>SDSDSD</li>
-						<li>deadea</li>
-						<li>sdsadawd</li>
-					</ul>
-				</div>
-				<div class="info rounded" id="awards">
-					<div class="text-icon">
-						<h3>Награды сезонов</h3>
-						<ion-icon name="trophy-outline"></ion-icon>
-					</div>
-					<ul>
-						<li>Asasasa</li>
-						<li>SDSDSD</li>
-						<li>deadea</li>
-						<li>sdsadawd</li>
-					</ul>
-				</div>
-			</div>
-			</div>
-
-		</div>
-
+	<div class="title-block">
+		<h2>Футбол</h2>
+		<ion-icon name="baseball-outline"></ion-icon>
 	</div>
+
+	<div class="header-content">
+		<div class="content-block" id="sport-page">
+			<div class="info rounded" id="teams">
+				<div class="text-icon">
+					<h3>Наши команды</h3>
+					<ion-icon name="accessibility-outline"></ion-icon>
+				</div>
+				{% if teams is defined and teams|length > 0 %}
+				<ul>
+					{% for team in teams %}
+					<li><a href="{{ url_for('routing.team_page', team_id=team['team_id']) }}">{{ team['team_name'] }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+				{% else %}
+				<p>Пусто</p>
+				{% endif %}
+			</div>
+			<div class="info rounded" id="games">
+				<div class="text-icon">
+					<h3>Недавние игры</h3>
+					<ion-icon name="checkmark-done-outline"></ion-icon>
+				</div>
+				{% if games is defined and games|length > 0 %}
+				<ul>
+					{% for game in games %}
+					<li><a href="{{ url_for('routing.game_page', game_id=game['game_id']) }}">{{
+							game['game_date'].strftime('%d.%m.%Y')}}, {{ game['location'] }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+				{% else %}
+				<p>Пусто</p>
+				{% endif %}
+			</div>
+			<div class="info rounded" id="events">
+				<div class="text-icon">
+					<h3>События</h3>
+					<ion-icon name="calendar-outline"></ion-icon>
+				</div>
+				{% if events is defined and events|length > 0 %}
+				<ul>
+					{% for event in events %}
+					<li>{{ event['event_date'].strftime('%d.%m.%Y')}}, {{ event['event_description'] }}, {{
+						event_teams[event['event_date']] }}
+					</li>
+					{% endfor %}
+				</ul>
+				{% else %}
+				<p>Пусто</p>
+				{% endif %}
+			</div>
+			<div class="info rounded" id="awards">
+				<div class="text-icon">
+					<h3>Награды сезонов</h3>
+					<ion-icon name="trophy-outline"></ion-icon>
+				</div>
+				{% if awards is defined and awards|length > 0 %}
+				<ul>
+					{% for award in awards %}
+					<li>{{ award['award_name'] }}, {{ awards_years[award['award_name']] }}, {{
+						awarded_teams[award['award_name']] }}
+					</li>
+					{% endfor %}
+				</ul>
+				{% else %}
+				<p>Пусто</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

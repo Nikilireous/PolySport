@@ -34,6 +34,7 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 	font-weight: 700;
+	transition: var(--transition);
 }
 
 body {
@@ -52,7 +53,7 @@ nav {
 	padding: 0 1rem;
 }
 
-nav a{
+nav a {
 	transition: var(--transition);
 }
 
@@ -69,6 +70,18 @@ nav a:hover {
 	justify-content: space-between;
 }
 
+hr {
+	border: 0;
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	justify-content: center;
+	width: 85%;
+	opacity: 0.4;
+	background-color: var(--purple);
+	height: 1px;
+}
+
 h1 {
 	font-size: 26px;
 }
@@ -80,17 +93,17 @@ h3 {
 }
 
 select {
-  max-width: 200px;
-  border: 1px solid var(--darkblue);
-  border-radius: var(--default-radius);
-  padding: 6px;
-  font-size: 16px;
-  cursor: pointer;
+	max-width: 200px;
+	border: 1px solid var(--darkblue);
+	border-radius: var(--default-radius);
+	padding: 6px;
+	font-size: 16px;
+	cursor: pointer;
 	background-color: var(--white);
 }
 
 select::-ms-expand {
-  display: none;
+	display: none;
 	outline: none;
 }
 
@@ -125,6 +138,7 @@ li strong {
 	min-height: 100vh;
 	line-height: 1.5;
 }
+
 .content-block .line-block {
 	align-items: center;
 }
@@ -134,9 +148,16 @@ li strong {
 }
 
 .title-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	text-align: center;
-	margin: 20px 0 -40px 0;
+	margin: 20px 0 -10px 0;
+}
+
+.title-block h2 {
+	margin-right: 10px;
 }
 
 .info {
@@ -144,28 +165,29 @@ li strong {
 }
 
 .rounded {
-	padding: 40px 20px;
-	border: 1px solid var(--purple);
+	margin: 50px 0;
+	padding: 30px 20px;
+	border: 1px solid var(--gray);
 	border-radius: var(--default-radius);
 }
 
-.content:last-child{
+.content:last-child {
 	margin-bottom: 0;
 }
 
 .content form {
-  margin: 1em 0;
-  display: flex;
-  flex-direction: column;
+	margin: 1em 0;
+	display: flex;
+	flex-direction: column;
 }
 
 .content label {
-  font-weight: bold;
-  margin-bottom: 0.5em;
+	font-weight: bold;
+	margin-bottom: 0.5em;
 }
 
 .content input {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 .flash {
@@ -256,7 +278,7 @@ li strong {
 	max-width: 550px;
 }
 
-nav .line-block h2{
+nav .line-block h2 {
 	margin-left: 20px;
 	font-size: 18px;
 }
@@ -274,28 +296,25 @@ nav h2 {
 	margin: 0;
 }
 
-.button {
-	padding: 6px;
-	border: 1px outset var(--darkblue);
-	border-radius: var(--default-radius);
-	color: var(--darkblue);
-	background-color: var(--white);
+button {
 	transition: var(--transition);
 }
 
-.button:hover, .form-button:hover {
+.button:hover,
+.form-button:hover {
 	color: var(--white);
 	background-color: var(--darkblue);
 	border-color: var(--darkblue);
 }
 
-.delete{
+.delete {
 	color: var(--red);
 	border: 1px outset var(--red);
 }
 
 .delete:hover {
-	background-color: var(--red);;
+	background-color: var(--red);
+	;
 	border: 1px outset var(--red);
 }
 
@@ -353,7 +372,8 @@ nav h2 {
 	width: fit-content;
 }
 
-.text-icon h3 {
+.text-icon h3,
+p {
 	margin-bottom: 0;
 	margin-right: 10px;
 }
@@ -367,58 +387,61 @@ nav h2 {
 /* Выпадающий контейнер */
 .dropdown {
 	font-size: 16px;
-  float: left;
-  overflow: hidden;
+	float: left;
+	overflow: hidden;
 }
 
 /* Кнопка выпадающего списка */
 .dropdown .dropbtn {
 	font-size: 18px;
 	font-weight: 700;
-  border: none;
-  outline: none;
-  padding: 14px 16px;
+	border: none;
+	outline: none;
+	padding: 10px 16px;
 	border-radius: var(--default-radius);
-  background-color: inherit;
-  font-family: inherit; /* Важно для вертикального выравнивания на мобильных телефонах */
-  margin: 0; /* Важно для вертикального выравнивания на мобильных телефонах */
+	background-color: inherit;
+	font-family: inherit;
+	/* Важно для вертикального выравнивания на мобильных телефонах */
+	margin: 0;
+	/* Важно для вертикального выравнивания на мобильных телефонах */
 }
 
 /* Добавить красный цвет фона для ссылок на навигационную панель при наведении курсора */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: var(--jade);
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+	background-color: var(--jade);
 	color: var(--white);
 }
 
 /* Выпадающее содержимое (скрыто по умолчанию) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
 }
 
 /* Ссылки внутри выпадающего списка */
 .dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
+	float: none;
+	color: black;
+	padding: 12px 16px;
 	font-weight: normal;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+	text-decoration: none;
+	display: block;
+	text-align: left;
 }
 
 /* Добавить серый цвет фона для выпадающих ссылок при наведении курсора */
 .dropdown-content a:hover {
-  background-color: #ddd;
+	background-color: #ddd;
 }
 
 /* Показать выпадающее меню при наведении курсора */
 .dropdown:hover .dropdown-content {
-  display: block;
+	display: block;
 }
 
 .login-content {
@@ -461,4 +484,29 @@ footer p {
 
 .icon-holder img {
 	max-width: 25px;
+}
+
+.grid-block {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+}
+
+.imgs {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.img-holder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 40px 0;
+}
+
+.img-holder img {
+	border-radius: var(--default-radius);
+	max-width: 50%;
 }

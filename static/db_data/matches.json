@@ -1,28 +1,28 @@
 {
-    "matches": [
-      {
-        "game_id": 1,
-        "team1_id": 101,
-        "team2_id": 102,
-        "winner_team": 101
-      },
-      {
-        "game_id": 2,
-        "team1_id": 102,
-        "team2_id": 103,
-        "winner_team": 103
-      },
-      {
-        "game_id": 3,
-        "team1_id": 103,
-        "team2_id": 104,
-        "winner_team": 103
-      },
-      {
-        "game_id": 4,
-        "team1_id": 104,
-        "team2_id": 101,
-        "winner_team": 104
-      }
-    ]
-  }
+  "matches": [
+    {
+      "game_id": 1,
+      "team1_id": 1,
+      "team2_id": 2,
+      "winner_team_id": 1
+    },
+    {
+      "game_id": 2,
+      "team1_id": 2,
+      "team2_id": 3,
+      "winner_team_id": 2
+    },
+    {
+      "game_id": 3,
+      "team1_id": 1,
+      "team2_id": 3,
+      "winner_team_id": 3
+    },
+    {
+      "game_id": 4,
+      "team1_id": 1,
+      "team2_id": 2,
+      "winner_team_id": 1
+    }
+  ]
+}

@@ -1,20 +1,20 @@
 {
-    "games": [
-      {
-        "game_date": "2024-10-26",
-        "location": "Stadium A"
-      },
-      {
-        "game_date": "2024-10-27",
-        "location": "Stadium B"
-      },
-      {
-        "game_date": "2024-11-01",
-        "location": "Stadium C"
-      },
-      {
-        "game_date": "2024-11-05",
-        "location": "Stadium D"
-      }
-    ]
-  }
+  "games": [
+    {
+      "game_date": "2024-10-26",
+      "location": "Лужники"
+    },
+    {
+      "game_date": "2024-10-27",
+      "location": "Лужники"
+    },
+    {
+      "game_date": "2024-11-01",
+      "location": "Динамо"
+    },
+    {
+      "game_date": "2024-11-05",
+      "location": "Динамо"
+    }
+  ]
+}

@@ -1,52 +1,52 @@
 {
-    "scores": [
-      {
-        "game_id": 1,
-        "judge_id": 201,
-        "team_id": 101,
-        "score": 3
-      },
-      {
-        "game_id": 1,
-        "judge_id": 201,
-        "team_id": 102,
-        "score": 2
-      },
-      {
-        "game_id": 2,
-        "judge_id": 202,
-        "team_id": 102,
-        "score": 1
-      },
-      {
-        "game_id": 2,
-        "judge_id": 202,
-        "team_id": 103,
-        "score": 4
-      },
-      {
-        "game_id": 3,
-        "judge_id": 203,
-        "team_id": 103,
-        "score": 3
-      },
-      {
-        "game_id": 3,
-        "judge_id": 203,
-        "team_id": 104,
-        "score": 2
-      },
-      {
-        "game_id": 4,
-        "judge_id": 203,
-        "team_id": 104,
-        "score": 6
-      },
-      {
-        "game_id": 4,
-        "judge_id": 203,
-        "team_id": 101,
-        "score": 5
-      }
-    ]
-  }
+  "scores": [
+    {
+      "game_id": 1,
+      "judge_id": 1,
+      "team_id": 1,
+      "score": 3
+    },
+    {
+      "game_id": 1,
+      "judge_id": 1,
+      "team_id": 1,
+      "score": 2
+    },
+    {
+      "game_id": 2,
+      "judge_id": 1,
+      "team_id": 1,
+      "score": 1
+    },
+    {
+      "game_id": 2,
+      "judge_id": 2,
+      "team_id": 2,
+      "score": 4
+    },
+    {
+      "game_id": 3,
+      "judge_id": 2,
+      "team_id": 2,
+      "score": 3
+    },
+    {
+      "game_id": 3,
+      "judge_id": 2,
+      "team_id": 3,
+      "score": 2
+    },
+    {
+      "game_id": 4,
+      "judge_id": 2,
+      "team_id": 3,
+      "score": 6
+    },
+    {
+      "game_id": 4,
+      "judge_id": 3,
+      "team_id": 1,
+      "score": 5
+    }
+  ]
+}

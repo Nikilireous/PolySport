@@ -1,24 +1,24 @@
 {
   "team_history": [
-      {
-        "team_id": 101,
-        "event_date": "2020-05-15",
-        "event_description": "Won the National Championship."
-      },
-      {
-        "team_id": 102,
-        "event_date": "2019-04-20",
-        "event_description": "Won the State Cup."
-      },
-      {
-        "team_id": 103,
-        "event_date": "2018-10-12",
-        "event_description": "Achieved record attendance at home games."
-      },
-      {
-        "team_id": 104,
-        "event_date": "2017-05-30",
-        "event_description": "Established a partnership with local schools."
-      }
-    ]
-  }
+    {
+      "team_id": 1,
+      "event_date": "2020-05-15",
+      "event_description": "Победа в национальном кубке"
+    },
+    {
+      "team_id": 1,
+      "event_date": "2019-04-20",
+      "event_description": "Победа в кубке Ленинградской области"
+    },
+    {
+      "team_id": 1,
+      "event_date": "2018-10-12",
+      "event_description": "Достигнуто рекордное упоминание в СМИ"
+    },
+    {
+      "team_id": 3,
+      "event_date": "2017-05-30",
+      "event_description": "Установлено сотрудничество с футбольными школами Москвы"
+    }
+  ]
+}

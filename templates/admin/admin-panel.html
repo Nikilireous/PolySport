@@ -2,13 +2,21 @@
 
 {% block title %}Панель управления{% endblock %}
 
-{% block header %}
-	<div class="header-content">
-		<div class="main-page-block">
-			<div class="logo-holder">
-				<img class="main-page-logo" src="{{ url_for('static', filename='assets/logo.png') }}" alt="">
+{% block content %}
+<div class="header">
+	<nav class="second-nav">
+		<div class="dropdown">
+			<button class="dropbtn">Наши клубы
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="{{ url_for('routing.football_page') }}">Футбол</a>
+				<a href="{{ url_for('routing.hockey_page') }}">Хоккей</a>
+				<a href="{{ url_for('routing.tennis_page') }}">Теннис</a>
+				<a href="{{ url_for('routing.volleyball_page') }}">Воллейбол</a>
+				<a href="{{ url_for('routing.basketball_page') }}">Баскетбол</a>
 			</div>
-			<a href="{{ url_for('auth.login') }}" class="button button-main-login">Войти в систему</a>
 		</div>
-	</div>
+	</nav>
+</div>
 {% endblock %}

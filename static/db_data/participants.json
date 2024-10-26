@@ -1,124 +1,148 @@
 {
   "participants": [
     {
-      "name": "Alice Johnson",
+      "name": "Андрей Дроздов",
       "age": 25,
-      "team_id": 101
+      "team_id": 1,
+      "photo": "1.png"
     },
     {
-      "name": "Bob Smith",
+      "name": "Боб Карлос",
       "age": 30,
-      "team_id": 101
+      "team_id": 1,
+      "photo": "2.png"
     },
     {
-      "name": "Charlie Brown",
+      "name": "Чарли Браун",
       "age": 22,
-      "team_id": 101
+      "team_id": 1,
+      "photo": "3.png"
     },
     {
-      "name": "Diana Prince",
+      "name": "Диана Кошемирова",
       "age": 28,
-      "team_id": 101
+      "team_id": 2,
+      "photo": "20.png"
     },
     {
-      "name": "Ethan Hunt",
+      "name": "Семён Канаревский",
       "age": 35,
-      "team_id": 101
+      "team_id": 1,
+      "photo": "4.png"
     },
     {
-      "name": "Fiona Gallagher",
+      "name": "Михаил Казаченко",
       "age": 27,
-      "team_id": 101
+      "team_id": 1,
+      "photo": "5.png"
     },
     {
-      "name": "George Clark",
+      "name": "Георгий Ярица",
       "age": 24,
-      "team_id": 102
+      "team_id": 1,
+      "photo": "6.png"
     },
     {
-      "name": "Hannah Lee",
+      "name": "Светлана Светлакова",
       "age": 29,
-      "team_id": 102
+      "team_id": 2,
+      "photo": "21.png"
     },
     {
-      "name": "Ian Wright",
+      "name": "Иван Друзь",
       "age": 31,
-      "team_id": 102
+      "team_id": 1,
+      "photo": "7.png"
     },
     {
-      "name": "Julia Roberts",
+      "name": "Емельян Самойлов",
       "age": 26,
-      "team_id": 102
+      "team_id": 1,
+      "photo": "8.png"
     },
     {
-      "name": "Kevin Spacey",
+      "name": "Константин Сыщиков",
       "age": 33,
-      "team_id": 102
+      "team_id": 1,
+      "photo": "9.png"
     },
     {
-      "name": "Laura Croft",
+      "name": "Лариса Назулина",
       "age": 27,
-      "team_id": 102
+      "team_id": 2,
+      "photo": "22.png"
     },
     {
-      "name": "Mike Tyson",
+      "name": "Майкл Наки",
       "age": 34,
-      "team_id": 103
+      "team_id": 1,
+      "photo": "10.png"
     },
     {
-      "name": "Nina Simone",
+      "name": "Нина Смирнова",
       "age": 32,
-      "team_id": 103
+      "team_id": 2,
+      "photo": "23.png"
     },
     {
-      "name": "Oscar Wilde",
+      "name": "Дарья Гончарова",
       "age": 29,
-      "team_id": 103
+      "team_id": 2,
+      "photo": "24.png"
     },
     {
-      "name": "Paula Abdul",
+      "name": "Пётр Пушнин",
       "age": 26,
-      "team_id": 103
+      "team_id": 1,
+      "photo": "11.png"
     },
     {
-      "name": "Quentin Tarantino",
+      "name": "Квентин Тарантино",
       "age": 38,
-      "team_id": 103
+      "team_id": 3,
+      "photo": "12.png"
     },
     {
-      "name": "Rita Hayworth",
+      "name": "Маргарита Найденко",
       "age": 30,
-      "team_id": 103
+      "team_id": 2,
+      "photo": "26.png"
     },
     {
-      "name": "Sam Smith",
+      "name": "Самуил Раскольников",
       "age": 28,
-      "team_id": 104
+      "team_id": 3,
+      "photo": "13.png"
     },
     {
-      "name": "Tina Turner",
+      "name": "Тина Ринатова",
       "age": 35,
-      "team_id": 104
+      "team_id": 2,
+      "photo": "27.png"
     },
     {
-      "name": "Ursula K. Le Guin",
+      "name": "Виктор Потемкин",
       "age": 40,
-      "team_id": 104
+      "team_id": 3,
+      "photo": "14.png"
     },
     {
-      "name": "Victor Hugo",
+      "name": "Александр Хомяков",
       "age": 31,
-      "team_id": 104
+      "team_id": 3,
+      "photo": "15.png"
     },
     {
-      "name": "Wanda Sykes",
+      "name": "Валентина Терешкова",
       "age": 45,
-      "team_id": 104
+      "team_id": 2,
+      "photo": "28.png"
     },
     {
-      "name": "Xena Warrior",
+      "name": "Максим Петров",
       "age": 29,
-      "team_id": 104
+      "team_id": 3,
+      "photo": "16.png"
     }
   ]
 }
