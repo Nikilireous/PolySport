@@ -1,12 +1,23 @@
 
-
 <Container>:
+
     orientation: 'vertical'
+    padding: 20
+    spacing: 10
+    size_hint: (0.8, 0.6)
+    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 
     TextInput:
-        text: 'Login: '
+        hint_text: 'Login'
+        multiline: False
+        font_size: 18
+
     TextInput:
-        text: 'Password: '
+        hint_text: 'Password'
+        multiline: False
+        font_size: 18
 
     Button:
-        text: 'submit'
+        text: 'Submit'
+        font_size: 24
+        on_press: print('Кнопка нажата!')

@@ -2,6 +2,8 @@ from kivy.app import App
 from kivy.uix.button import Button
 from kivy.base import Builder
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
+from kivy.core.window import Window
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.textinput import TextInput
 from kivy.uix.recycleview import RecycleView
@@ -22,7 +24,11 @@ class Container(BoxLayout):
 
 class registration_screen(App):
     def build(self):
+        # Устанавливаем размер окна
+        Window.size = (800, 600)
 
+        # Делаем окно неизменяемым
+        Window.resizable = False
         return Container()
 
 
