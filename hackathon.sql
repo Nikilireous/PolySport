@@ -98,3 +98,10 @@ CREATE TABLE team_history (
     event_description TEXT,
     FOREIGN KEY (team_id) REFERENCES teams(team_id) ON DELETE CASCADE
 );
+
+-- Таблица пользователей с возможностью редактирования
+CREATE TABLE IF NOT EXISTS users (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	username TEXT UNIQUE NOT NULL,
+	password TEXT NOT NULL,
+);

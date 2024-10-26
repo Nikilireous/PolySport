@@ -1,0 +1,24 @@
+{
+    "awards": [
+      {
+        "award_name": "Best Player",
+        "season_id": 1
+      },
+      {
+        "award_name": "Top Scorer",
+        "season_id": 1
+      },
+      {
+        "award_name": "Best Team",
+        "season_id": 2
+      },
+      {
+        "award_name": "Best Coach",
+        "season_id": 2
+      },
+      {
+        "award_name": "Most Improved Player",
+        "season_id": 3
+      }
+    ]
+  }

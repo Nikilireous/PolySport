@@ -1,0 +1,28 @@
+{
+    "team_statistics": [
+      {
+        "team_id": 101,
+        "total_games": 2,
+        "total_wins": 1,
+        "total_losses": 1
+      },
+      {
+        "team_id": 102,
+        "total_games": 2,
+        "total_wins": 0,
+        "total_losses": 2
+      },
+      {
+        "team_id": 103,
+        "total_games": 2,
+        "total_wins": 2,
+        "total_losses": 0
+      },
+      {
+        "team_id": 104,
+        "total_games": 2,
+        "total_wins": 1,
+        "total_losses": 1
+      }
+    ]
+  }

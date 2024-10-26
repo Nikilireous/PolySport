@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='buttons.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+	<script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+	<title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+	{% if request.path != "/auth/login" %}
+		<nav>
+			<a href="{{ url_for('index') }}">
+				<img class="nav-logo" src="{{ url_for('static', filename='assets/logo.png') }}" alt="">
+			</a>
+			<div class="line-block">
+				<div class="dropdown">
+					<button class="dropbtn">Наши клубы
+						<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+						<a href="{{ url_for('routing.football_page') }}">Футбол</a>
+						<a href="{{ url_for('routing.hockey_page') }}">Хоккей</a>
+						<a href="{{ url_for('routing.tennis_page') }}">Теннис</a>
+						<a href="{{ url_for('routing.volleyball_page') }}">Воллейбол</a>
+						<a href="{{ url_for('routing.basketball_page') }}">Баскетбол</a>
+					</div>
+				</div>
+				{% if request.path != "/" %}
+					<h2><a href="/"><ion-icon name ="home"></ion-icon>Главная</a></h2>
+					<h2><a href="{{ url_for('auth.logout') }}"><ion-icon name="log-out-outline"></ion-icon>Выйти</a></h2>
+				{% else %}
+					<h2><a href="{{ url_for('auth.login') }}"><ion-icon name="log-in-outline"></ion-icon>Войти</a></h2>
+				{% endif %}
+			</div>
+		</nav>
+	{% endif %}
+	<section class="content">
+		{% block content %}{% endblock %}
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(document).ready(() => { // анимация прокрутки, удаление якоря из адресной строки
+			$("a[href*='#']").on("click", function (e) {
+				let anchor = $(this);
+				$('html, body').stop().animate({
+					scrollTop: $(anchor.attr('href')).offset().top
+				}, 777);
+				e.preventDefault();
+				return false;
+			});
+		});
+	</script>
+</body>

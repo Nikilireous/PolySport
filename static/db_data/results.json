@@ -1,0 +1,44 @@
+{
+    "results": [
+      {
+        "game_id": 1,
+        "team_id": 101,
+        "score": 3
+      },
+      {
+        "game_id": 1,
+        "team_id": 102,
+        "score": 2
+      },
+      {
+        "game_id": 2,
+        "team_id": 102,
+        "score": 1
+      },
+      {
+        "game_id": 2,
+        "team_id": 103,
+        "score": 4
+      },
+      {
+        "game_id": 3,
+        "team_id": 103,
+        "score": 3
+      },
+      {
+        "game_id": 3,
+        "team_id": 104,
+        "score": 2
+      },
+      {
+        "game_id": 4,
+        "team_id": 104,
+        "score": 6
+      },
+      {
+        "game_id": 4,
+        "team_id": 101,
+        "score": 5
+      }
+    ]
+  }

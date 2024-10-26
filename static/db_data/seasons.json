@@ -1,0 +1,20 @@
+{
+    "seasons": [
+      {
+        "year": 2020,
+        "champion_team_id": 1
+      },
+      {
+        "year": 2021,
+        "champion_team_id": 2
+      },
+      {
+        "year": 2022,
+        "champion_team_id": 3
+      },
+      {
+        "year": 2023,
+        "champion_team_id": 4
+      }
+    ]
+  }

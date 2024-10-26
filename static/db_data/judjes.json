@@ -1,0 +1,20 @@
+{
+    "judges": [
+      {
+        "name": "John Doe",
+        "experience_years": 15
+      },
+      {
+        "name": "Jane Smith",
+        "experience_years": 20
+      },
+      {
+        "name": "Emily Johnson",
+        "experience_years": 10
+      },
+      {
+        "name": "Michael Brown",
+        "experience_years": 25
+      }
+    ]
+  }

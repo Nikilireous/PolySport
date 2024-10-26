@@ -1,0 +1,24 @@
+{
+    "teams": [
+      {
+        "team_name": "Manchester United",
+        "city": "Manchester",
+        "year_formed": 1878
+      },
+      {
+        "team_name": "Arsenal",
+        "city": "London",
+        "year_formed": 1886
+      },
+      {
+        "team_name": "Liverpool",
+        "city": "Liverpool",
+        "year_formed": 1892
+      },
+      {
+        "team_name": "Chelsea",
+        "city": "London",
+        "year_formed": 1905
+      }
+    ]
+  }
