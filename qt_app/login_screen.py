@@ -1,10 +1,10 @@
 from PyQt6 import QtWidgets
 import sys
 from qt_app.user_interfaces.log_interface import Ui_MainWindow
-from db_screen import db_screen
+from db_screen import DbScreen
 
 
-class login_window(Ui_MainWindow, QtWidgets.QMainWindow):
+class LoginWindow(Ui_MainWindow, QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
 
@@ -13,7 +13,7 @@ class login_window(Ui_MainWindow, QtWidgets.QMainWindow):
 
         self.password = "password"
         self.login = "login"
-        self.second_screen = db_screen()
+        self.second_screen = DbScreen()
 
     def setup_btns(self):
         self.submit_btn.clicked.connect(self.submit)
@@ -33,7 +33,7 @@ class login_window(Ui_MainWindow, QtWidgets.QMainWindow):
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
 
-    window = login_window()
+    window = LoginWindow()
     window.show()
 
     app.exec()

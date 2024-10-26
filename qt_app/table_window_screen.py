@@ -7,7 +7,7 @@ from qt_app.user_interfaces.table_window_interface import Ui_MainWindow
 import json
 
 
-class table_window(Ui_MainWindow, QtWidgets.QMainWindow):
+class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
 
@@ -67,7 +67,7 @@ class table_window(Ui_MainWindow, QtWidgets.QMainWindow):
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     try:
-        window = table_window()
+        window = TableWindow()
         window.ui_create()
 
         window.show()

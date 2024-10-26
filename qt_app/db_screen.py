@@ -1,10 +1,10 @@
 from PyQt6 import QtWidgets
 import sys
 from qt_app.user_interfaces.sports_interface import Ui_MainWindow
-from table_window_screen import table_window
+from table_window_screen import TableWindow
 
 
-class db_screen(Ui_MainWindow, QtWidgets.QMainWindow):
+class DbScreen(Ui_MainWindow, QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
 
@@ -13,7 +13,7 @@ class db_screen(Ui_MainWindow, QtWidgets.QMainWindow):
         self.data_existing = True
 
         try:
-            self.tabled_db = table_window()
+            self.tabled_db = TableWindow()
 
         except FileNotFoundError:
             self.statusbar.setStyleSheet('color: red')
@@ -40,7 +40,7 @@ class db_screen(Ui_MainWindow, QtWidgets.QMainWindow):
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
 
-    window = db_screen()
+    window = DbScreen()
     window.show()
 
     app.exec()
