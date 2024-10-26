@@ -1,6 +1,6 @@
-from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtWidgets
 import sys
-from sports_distribution import Ui_MainWindow
+from qt_app.user_interfaces.sports_interface import Ui_MainWindow
 
 
 class db_screen(Ui_MainWindow, QtWidgets.QMainWindow):

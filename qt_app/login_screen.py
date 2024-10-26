@@ -1,6 +1,6 @@
-from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtWidgets
 import sys
-from log_window import Ui_MainWindow
+from qt_app.user_interfaces.log_interface import Ui_MainWindow
 from db_screen import db_screen
 
 

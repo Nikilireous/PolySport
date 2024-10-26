@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
         self.Logo_label.setGeometry(QtCore.QRect(2, 2, 500, 100))
         self.Logo_label.setText("")
         self.Logo_label.setObjectName("Logo_label")
-        self.pixmap = QPixmap('logo.png')
+        self.pixmap = QPixmap('photos/logo.png')
         self.Logo_label.setPixmap(self.pixmap)
         self.Logo_label.resize(self.pixmap.width(), self.pixmap.height())
 
