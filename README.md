@@ -1,0 +1,1 @@
+# Hakaton-Polytech-2024
