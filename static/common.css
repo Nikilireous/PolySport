@@ -127,7 +127,10 @@ li strong {
 }
 .content-block .line-block {
 	align-items: center;
-	margin-bottom: 30px;
+}
+
+#main-page-desc {
+	margin: 30px 0 100px 0;
 }
 
 .title-block {

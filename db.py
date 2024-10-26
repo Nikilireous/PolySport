@@ -3,20 +3,6 @@ import sqlite3
 import click
 from werkzeug.security import generate_password_hash
 
-IN_PROGRESS_STATUS = 'В процессе'
-DONE_STATUS = 'Выполнено'
-ALL_TASKS = 'Все'
-
-
-""" Перевод численного статуса в буквенный  """
-def convert_task_status(status: str) -> str:
-	if status == "0": 
-		return IN_PROGRESS_STATUS
-	elif status == "1":
-		return DONE_STATUS
-	else: 
-		return ALL_TASKS
-
 
 def get_db():
 	if "db" not in g:
@@ -111,32 +97,6 @@ def get_task_files(id):
 	return [file for file in files_string["files"].split(";") if file != ""]
 
 
-def update_task_files(id, new_filenames):
-	db = get_db()
-	old_files = get_task_files(id)
-	if len(old_files) == 1:
-		filenames = new_filenames
-	else: 
-		filenames = ";".join(old_files) + ";" + new_filenames
-	print(f"--> Updating task {id} files to {filenames}")
-	try:
-		db.execute("UPDATE tasks SET files = ? WHERE id = ?;", (filenames, id))
-		db.commit()
-	except db.IntegrityError as e:
-		return {'status': e}
-	return {'status': 'success'}
-
-
-def update_task_status(id, status):
-	db = get_db()
-	try:
-		db.execute("UPDATE tasks SET current_status = ? WHERE id = ?;", (status, id))
-		db.commit()
-	except db.IntegrityError as e:
-		return {'status': e}
-	return {'status': 'success'}
-
-
 def update_task_deadline(id, deadline):
 	db = get_db()
 	try:
@@ -144,69 +104,6 @@ def update_task_deadline(id, deadline):
 		db.commit()
 	except db.IntegrityError as e:
 		return {'status': e}
-	return {'status': 'success'}
-
-
-def add_new_user(fstn, secn, surn, login, psw, is_admin):
-	db = get_db()
-	error = None
-	missing = {fstn: 'Имя',
-						secn: 'Фамилия',
-						surn: 'Отчество',
-						login: 'Логин для входа',
-						psw: 'Пароль для входа'}
-
-	for i in missing:
-		if not i:
-			error = f'Укажите {missing[i]}'
-			break
-
-	if error is None:
-			try:
-					hashed_psw = generate_password_hash(psw)
-					db.execute(
-							"INSERT INTO users"
-							"(first_name, second_name, surname, username, password, is_admin)"
-							"VALUES (?, ?, ?, ?, ?, ?);",
-							(fstn, secn, surn, login, hashed_psw, is_admin)
-						)
-					db.commit()
-			except db.IntegrityError:
-					error = f"Имя пользователя '{login}' уже занято"
-			
-	if not error is None:
-		return {'status': error}
-	return {'status': 'success'}
-
-
-def add_new_task(author_id, recipient, title, body, status, deadline=" ", filenames=";"):
-	db = get_db()
-	error = None
-	missing = {author_id: 'автора',
-						recipient: 'получатель',
-						title: 'заголовок',
-						body: 'описание',
-						status: 'статус'}
-
-	for i in missing:
-		if not i:
-			error = f'Укажите {missing[i]} задачи'
-			break
-
-	if error is None:
-			try:
-					db.execute(
-							"INSERT INTO tasks"
-							"(author_id, recipient, files, title, body, current_status, deadline)"
-							"VALUES (?, ?, ?, ?, ?, ?, ?)",
-							(author_id, recipient, filenames, title, body, status, deadline)
-						)
-					db.commit()
-			except db.IntegrityError:
-					error = f"Данная задача уже назначена"
-			
-	if not error is None:
-		return {'status': error}
 	return {'status': 'success'}
 
 
@@ -234,38 +131,16 @@ def add_default_users():
 
 def init_db():
 	db = get_db()
-	with current_app.open_resource("schema.sql") as f:
+	with current_app.open_resource("hackaton.sql") as f:
 			db.executescript(f.read().decode("utf8"))
 
 
 def init_app(app):
 	app.teardown_appcontext(close_db)
 	app.cli.add_command(init_db_command)
-	app.cli.add_command(add_user_command)
 
 
 @click.command("init-db")
-@click.option("--du", default=False)
-@click.option("--dt", default=False)
-def init_db_command(du, dt):
+def init_db_command():
 	init_db()
-	if du:
-		add_default_users()
-	if dt:
-		add_default_tasks()
 	click.echo("Initialized the database.")
-
-
-@click.command("add-user")
-@click.option("--fstn", required=True, type=str)
-@click.option("--secn", required=True, type=str)
-@click.option("--surn", required=True, type=str)
-@click.option("--login", required=True, type=str)
-@click.option("--psw", required=True, type=str)
-@click.option("--isadm", required=True, type=bool)
-def add_user_command(fstn, secn, surn, login, psw, isadm):
-	resp = add_new_user(fstn, secn, surn, login, psw, isadm)
-	if resp['status'] == "success":
-		click.echo(f"Added new account to database with login '{login}'")
-	else:
-		click.echo(resp['error'])
