@@ -34,7 +34,8 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.Tennis.setFont(font)
         self.Tennis.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border-radius: 20px;")
+"border-radius: 20px;\n"
+"color: black")
         self.Tennis.setObjectName("Tennis")
         self.horizontalLayout.addWidget(self.Tennis)
         self.Football = QtWidgets.QPushButton(parent=self.horizontalLayoutWidget)
@@ -44,7 +45,8 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.Football.setFont(font)
         self.Football.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border-radius: 20px;")
+"border-radius: 20px;\n"
+"color: black")
         self.Football.setObjectName("Football")
         self.horizontalLayout.addWidget(self.Football)
         self.Bascketball = QtWidgets.QPushButton(parent=self.horizontalLayoutWidget)
@@ -54,7 +56,8 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.Bascketball.setFont(font)
         self.Bascketball.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border-radius: 20px;")
+"border-radius: 20px;\n"
+"color: black")
         self.Bascketball.setObjectName("Bascketball")
         self.horizontalLayout.addWidget(self.Bascketball)
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(parent=self.centralwidget)
@@ -71,7 +74,7 @@ class Ui_MainWindow(object):
         self.Volleyball.setFont(font)
         self.Volleyball.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border-radius: 20px;\n"
-"")
+"color: black")
         self.Volleyball.setObjectName("Volleyball")
         self.horizontalLayout_2.addWidget(self.Volleyball)
         self.Hockey = QtWidgets.QPushButton(parent=self.horizontalLayoutWidget_2)
@@ -81,7 +84,8 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.Hockey.setFont(font)
         self.Hockey.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border-radius: 20px;")
+"border-radius: 20px;\n"
+"color: black")
         self.Hockey.setObjectName("Hockey")
         self.horizontalLayout_2.addWidget(self.Hockey)
         MainWindow.setCentralWidget(self.centralwidget)

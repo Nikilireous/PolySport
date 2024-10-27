@@ -29,6 +29,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.password.setFont(font)
+        self.password.setStyleSheet('color: black')
         self.password.setObjectName("password")
         self.gridLayout.addWidget(self.password, 1, 0, 1, 1)
 
@@ -38,20 +39,21 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.login.setFont(font)
+        self.login.setStyleSheet('color: black')
         self.login.setObjectName("login")
         self.gridLayout.addWidget(self.login, 0, 0, 1, 1)
 
         self.login_edit = QtWidgets.QTextEdit(parent=self.gridLayoutWidget)
         self.login_edit.setMinimumSize(QtCore.QSize(350, 40))
         self.login_edit.setMaximumSize(QtCore.QSize(350, 40))
-        self.login_edit.setStyleSheet("background-color: rgb(121,189,143);")
+        self.login_edit.setStyleSheet("background-color: rgb(121,189,143); color: black")
         self.login_edit.setObjectName("login_edit")
         self.gridLayout.addWidget(self.login_edit, 0, 1, 1, 1)
 
         self.password_edit = QtWidgets.QTextEdit(parent=self.gridLayoutWidget)
         self.password_edit.setMinimumSize(QtCore.QSize(350, 40))
         self.password_edit.setMaximumSize(QtCore.QSize(350, 40))
-        self.password_edit.setStyleSheet("background-color: rgb(121,189,143);")
+        self.password_edit.setStyleSheet("background-color: rgb(121,189,143); color: black")
         self.password_edit.setObjectName("password_edit")
         self.gridLayout.addWidget(self.password_edit, 1, 1, 1, 1)
 
@@ -60,7 +62,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.submit_btn.setFont(font)
-        self.submit_btn.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.submit_btn.setStyleSheet("background-color: rgb(255, 255, 255); color: black")
         self.submit_btn.setObjectName("submit_btn")
 
         self.Logo_label = QtWidgets.QLabel(parent=self.centralwidget)

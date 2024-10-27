@@ -37,6 +37,7 @@ class Ui_MainWindow(object):
         self.comboBox = QtWidgets.QComboBox(parent=self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(910, 10, 131, 31))
         self.comboBox.setObjectName("comboBox")
+        self.comboBox.setStyleSheet('color: black')
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1062, 21))
