@@ -31,9 +31,9 @@ class Ui_MainWindow(object):
         self.mainTable_2.setStyleSheet("background-color: rgb(243, 243, 243);\n"
                                      "color: rgb(0, 0, 0);\n"
                                      "border-color: rgb(0, 0, 0);")
-        self.mainTable_2.setColumnCount(1)
+        self.mainTable_2.setColumnCount(2)
         self.mainTable_2.setRowCount(1)
-        self.mainTable_2.setHorizontalHeaderLabels(['id'])
+        self.mainTable_2.setHorizontalHeaderLabels(['Id type', 'Id'])
         self.comboBox = QtWidgets.QComboBox(parent=self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(910, 10, 131, 31))
         self.comboBox.setObjectName("comboBox")
