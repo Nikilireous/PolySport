@@ -171,4 +171,5 @@ def update_game():
 				flash(resp['status'])
 		else:
 			return redirect(url_for("routing.admin_panel"))
-	return render_template("admin/update-game.html", main_page_url=request.referrer)
+	teams = db.get_all_games()
+	return render_template("admin/update-game.html", main_page_url=request.referrer, teams=teams)

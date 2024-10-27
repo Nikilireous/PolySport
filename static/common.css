@@ -485,12 +485,22 @@ footer p {
 	color: var(--white);
 }
 
+footer a, ion-icon{
+	font-weight: normal;
+	color: var(--white)	
+}
+
+footer ion-icon {
+	margin-right: 5px;
+}
+
 /* icons */
 
 .icon-holder {
 	display: flex;
 	justify-content: space-between;
-	width: 180px;
+	margin-top: 10px;
+	width: 160px;
 }
 
 .icon-holder img {
