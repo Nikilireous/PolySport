@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>903</width>
+    <width>1062</width>
     <height>820</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(121,189,143);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTableWidget" name="mainTable">
@@ -19,8 +22,34 @@
      <rect>
       <x>15</x>
       <y>11</y>
-      <width>801</width>
-      <height>751</height>
+      <width>871</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(243, 243, 243);</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="mainTable_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>510</y>
+      <width>871</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(243, 243, 243);</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>10</y>
+      <width>131</width>
+      <height>31</height>
      </rect>
     </property>
    </widget>
@@ -30,8 +59,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>903</width>
-     <height>21</height>
+     <width>1062</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

@@ -12,17 +12,28 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(950, 950)
+        MainWindow.resize(1062, 820)
+        MainWindow.setStyleSheet("background-color: rgb(121,189,143);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.mainTable = QtWidgets.QTableWidget(parent=self.centralwidget)
-        self.mainTable.setGeometry(QtCore.QRect(10, 10, 900, 900))
+        self.mainTable.setGeometry(QtCore.QRect(15, 11, 871, 371))
+        self.mainTable.setStyleSheet("background-color: rgb(243, 243, 243);")
         self.mainTable.setObjectName("mainTable")
         self.mainTable.setColumnCount(0)
         self.mainTable.setRowCount(0)
+        self.mainTable_2 = QtWidgets.QTableWidget(parent=self.centralwidget)
+        self.mainTable_2.setGeometry(QtCore.QRect(20, 510, 871, 81))
+        self.mainTable_2.setStyleSheet("background-color: rgb(243, 243, 243);")
+        self.mainTable_2.setObjectName("mainTable_2")
+        self.mainTable_2.setColumnCount(0)
+        self.mainTable_2.setRowCount(0)
+        self.comboBox = QtWidgets.QComboBox(parent=self.centralwidget)
+        self.comboBox.setGeometry(QtCore.QRect(910, 10, 131, 31))
+        self.comboBox.setObjectName("comboBox")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 903, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1062, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -35,3 +46,13 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec())
