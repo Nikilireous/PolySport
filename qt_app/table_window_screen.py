@@ -1,7 +1,7 @@
-from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtWidgets
 import sys
 
-from PyQt6.QtWidgets import QLabel, QPushButton
+from PyQt6.QtWidgets import QLabel
 
 from qt_app.user_interfaces.table_window_interface import Ui_MainWindow
 import json
@@ -20,13 +20,10 @@ class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
 
         self.mainTable.cellDoubleClicked.connect(self.change_table)
 
-
-        self.team_words = ['team_name', 'team_id', 'team1_id', 'team2_id', 'winner_team_id','champion_team_id']
+        self.team_words = ['team_name', 'team_id', 'team1_id', 'team2_id', 'winner_team_id', 'champion_team_id']
         self.game_words = ['game_id']
         self.judge_words = ['judge_id']
         self.season_words = ['season_id']
-
-
 
     def ui_create(self) -> None:
         self.mainTable.clear()
@@ -34,7 +31,7 @@ class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         self.mainTable.setRowCount(len(data))
         self.mainTable.setColumnCount(len(data[0]))
         self.mainTable.setHorizontalHeaderLabels(list(map(lambda x: x.capitalize().replace('_', ' '),
-                                                              (data[0].keys()))))
+                                                          (data[0].keys()))))
 
         for x_coord, row in enumerate(data):
             for y_coord, cell in enumerate(row.values()):
@@ -42,7 +39,6 @@ class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
                 label.setText(str(cell))
                 self.mainTable.setCellWidget(x_coord, y_coord, label)
         self.mainTable.resizeColumnsToContents()
-
 
     def change_table(self, x, y):
         data = self.data[self.correct_table]
@@ -75,5 +71,3 @@ if __name__ == "__main__":
 
     except FileNotFoundError:
         pass
-
-

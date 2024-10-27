@@ -9,13 +9,13 @@ class LoginWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         super().__init__()
 
         self.setupUi(self)
-        self.setup_btns()
+        self.setup_buttons()
 
         self.password = "password"
         self.login = "login"
         self.second_screen = DbScreen()
 
-    def setup_btns(self):
+    def setup_buttons(self):
         self.submit_btn.clicked.connect(self.submit)
 
     def submit(self):
@@ -27,7 +27,6 @@ class LoginWindow(Ui_MainWindow, QtWidgets.QMainWindow):
             self.close()
         else:
             self.statusBar.showMessage("No no no mister fish, you won't still our db")
-
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ class DbScreen(Ui_MainWindow, QtWidgets.QMainWindow):
         super().__init__()
 
         self.setupUi(self)
-        self.setup_btns()
+        self.setup_buttons()
         self.data_existing = True
 
         try:
@@ -20,9 +20,7 @@ class DbScreen(Ui_MainWindow, QtWidgets.QMainWindow):
             self.statusbar.showMessage('Database json does not exist')
             self.data_existing = False
 
-
-
-    def setup_btns(self):
+    def setup_buttons(self):
         self.Hockey.clicked.connect(self.submit)
         self.Football.clicked.connect(self.submit)
         self.Tennis.clicked.connect(self.submit)
@@ -31,10 +29,9 @@ class DbScreen(Ui_MainWindow, QtWidgets.QMainWindow):
 
     def submit(self):
         if self.sender() == self.Football and self.data_existing:
-                self.tabled_db.ui_create()
-                self.tabled_db.show()
-                self.close()
-
+            self.tabled_db.ui_create()
+            self.tabled_db.show()
+            self.close()
 
 
 if __name__ == "__main__":
