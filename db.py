@@ -4,6 +4,7 @@ import click
 from werkzeug.security import generate_password_hash
 import os
 import json
+import io
 
 
 def get_db():
@@ -75,6 +76,13 @@ def add_new_award(db, award_name, season_id):
 
 def add_new_game(db, game_date, location):
 	error = None
+	if "." in game_date:
+		game_date = game_date.split(".")
+		temp = game_date[0]
+		game_date[0] = game_date[2]
+		game_date[2] = temp
+		game_date = "-".join(game_date)
+
 	try:
 		db.execute(
 				"INSERT INTO games"
@@ -224,6 +232,54 @@ def add_new_team_statistics(db, team_id, total_games, total_wins, total_losses):
 			error = e
 	if error:
 		return {'status': error}
+	return {'status': 'success'}
+
+
+def remove_team(team_id):
+	db = get_db()
+	try:
+		db.execute("DELETE FROM teams WHERE team_id = ?;", (team_id,))
+		db.commit()
+	except db.IntegrityError as e:
+		return {'status': e}
+	return {'status': 'success'}
+
+
+def remove_game(game_id):
+	db = get_db()
+	try:
+		db.execute("DELETE FROM games WHERE game_id = ?;", (game_id,))
+		db.commit()
+	except db.IntegrityError as e:
+		return {'status': e}
+	return {'status': 'success'}
+
+
+def update_team(team_id, data):
+	db = get_db()
+	try:
+		db.execute("UPDATE teams SET team_name = ?, city = ?, year_formed = ? WHERE team_id = ?;", (data['new_name'], data['new_city'], data['new_year'], team_id))
+		db.commit()
+	except db.IntegrityError as e:
+		return {'status': e}
+	return {'status': 'success'}
+
+
+def update_game(game_id, data):
+	game_date = data['game_date']
+	if "." in game_date:
+		game_date = game_date.split(".")
+		temp = game_date[0]
+		game_date[0] = game_date[2]
+		game_date[2] = temp
+		game_date = "-".join(game_date)
+	print(game_date)
+	db = get_db()
+	try:
+		db.execute("UPDATE games SET game_date = ?, location = ? WHERE game_id = ?;", (game_date, data['location'], game_id))
+		db.commit()
+	except db.IntegrityError as e:
+		return {'status': e}
 	return {'status': 'success'}
 
 
@@ -382,10 +438,14 @@ def get_team_events(team_id):
 	db = get_db()
 	return db.execute("SELECT event_date, event_description FROM team_history WHERE team_id = ?", (team_id,)).fetchall()
 
+def get_user_by_id(user_id):
+	db = get_db()
+	return db.execute("SELECT username, password FROM users WHERE id = ?", (user_id,)).fetchone()
+
 
 def get_user_by_name(username):
 	db = get_db()
-	return db.execute("SELECT username, password FROM users WHERE username = ?", (username,)).fetchone()
+	return db.execute("SELECT id, username, password FROM users WHERE username = ?", (username,)).fetchone()
 
 
 def init_db():
@@ -395,8 +455,8 @@ def init_db():
 	with open("./hackathon.sql") as f:
 		db.executescript(f.read())
 		print("Database created")
-		# insert_data()
-		# print("Data inserted")
+		insert_data()
+		print("Data inserted")
 
 
 def init_app(app):

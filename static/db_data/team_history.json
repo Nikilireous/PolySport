@@ -3,22 +3,22 @@
     {
       "team_id": 1,
       "event_date": "2020-05-15",
-      "event_description": "Победа в национальном кубке"
+      "event_description": "Won national cup"
     },
     {
       "team_id": 1,
       "event_date": "2019-04-20",
-      "event_description": "Победа в кубке Ленинградской области"
+      "event_description": "Won Saint Petersburg cup"
     },
     {
       "team_id": 1,
       "event_date": "2018-10-12",
-      "event_description": "Достигнуто рекордное упоминание в СМИ"
+      "event_description": "Record-breaking media mention achieved"
     },
     {
       "team_id": 3,
       "event_date": "2017-05-30",
-      "event_description": "Установлено сотрудничество с футбольными школами Москвы"
+      "event_description": "Cooperation with Moscow football schools has been established"
     }
   ]
 }

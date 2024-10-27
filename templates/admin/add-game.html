@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="header-content">
+		<div class="content-block">
+			<h1>{% block title %}Назначение задачи{% endblock %}</h1>
+			<div class="icon-close">
+				<a href="{{ main_page_url }}" class="icon-close-cross" onclick="this.form.submit()">+</a>
+			</div>
+
+			{% for message in get_flashed_messages() %}
+			<div class="flash">{{ message }}</div>
+			{% endfor %}
+
+			<form action="" method="post">
+				<div class="form-field">
+					<input type="text" placeholder="Дата игры" name="game_date" id="game_date" pattern="\d{2}(\.|-)\d{2}(\.|-)\d{4}" required />
+				</div>
+				<div class="form-field">
+					<input type="text" placeholder="Место проведения" name="location" id="location" required />
+				</div>
+				<div class="form-button-block">
+					<input class="form-button" type="submit" value="Добавить" />
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

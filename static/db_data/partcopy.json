@@ -1,145 +1,145 @@
 {
   "participants": [
     {
-      "name": "Andrew Drozdow",
+      "name": "Андрей Дроздов",
       "age": 25,
       "team_id": 1,
       "photo": "1.png"
     },
     {
-      "name": "Bob Carlos",
+      "name": "Боб Карлос",
       "age": 30,
       "team_id": 1,
       "photo": "2.png"
     },
     {
-      "name": "Charli Chaplin",
+      "name": "Чарли Браун",
       "age": 22,
       "team_id": 1,
       "photo": "3.png"
     },
     {
-      "name": "Diana Koshemirova",
+      "name": "Диана Кошемирова",
       "age": 28,
       "team_id": 2,
       "photo": "20.png"
     },
     {
-      "name": "Semen Demidov",
+      "name": "Семён Канаревский",
       "age": 35,
       "team_id": 1,
       "photo": "4.png"
     },
     {
-      "name": "Michael Kazachenko",
+      "name": "Михаил Казаченко",
       "age": 27,
       "team_id": 1,
       "photo": "5.png"
     },
     {
-      "name": "Georgy Yarica",
+      "name": "Георгий Ярица",
       "age": 24,
       "team_id": 1,
       "photo": "6.png"
     },
     {
-      "name": "Svetlana Svetlakova",
+      "name": "Светлана Светлакова",
       "age": 29,
       "team_id": 2,
       "photo": "21.png"
     },
     {
-      "name": "Ivan Druz",
+      "name": "Иван Друзь",
       "age": 31,
       "team_id": 1,
       "photo": "7.png"
     },
     {
-      "name": "Emelyan Samoylov",
+      "name": "Емельян Самойлов",
       "age": 26,
       "team_id": 1,
       "photo": "8.png"
     },
     {
-      "name": "Konstantin Sischikov",
+      "name": "Константин Сыщиков",
       "age": 33,
       "team_id": 1,
       "photo": "9.png"
     },
     {
-      "name": "Larisa Mizulina",
+      "name": "Лариса Назулина",
       "age": 27,
       "team_id": 2,
       "photo": "22.png"
     },
     {
-      "name": "Michael Naki",
+      "name": "Майкл Наки",
       "age": 34,
       "team_id": 1,
       "photo": "10.png"
     },
     {
-      "name": "Nina Smirnova",
+      "name": "Нина Смирнова",
       "age": 32,
       "team_id": 2,
       "photo": "23.png"
     },
     {
-      "name": "Darya Goncharova",
+      "name": "Дарья Гончарова",
       "age": 29,
       "team_id": 2,
       "photo": "24.png"
     },
     {
-      "name": "Petr Pushnin",
+      "name": "Пётр Пушнин",
       "age": 26,
       "team_id": 1,
       "photo": "11.png"
     },
     {
-      "name": "Kveentin Tarantino",
+      "name": "Квентин Тарантино",
       "age": 38,
       "team_id": 3,
       "photo": "12.png"
     },
     {
-      "name": "Margarita Naidenkko",
+      "name": "Маргарита Найденко",
       "age": 30,
       "team_id": 2,
       "photo": "26.png"
     },
     {
-      "name": "Samuil Raskolnikov",
+      "name": "Самуил Раскольников",
       "age": 28,
       "team_id": 3,
       "photo": "13.png"
     },
     {
-      "name": "Tina Rinatova",
+      "name": "Тина Ринатова",
       "age": 35,
       "team_id": 2,
       "photo": "27.png"
     },
     {
-      "name": "Viktor Potemkin",
+      "name": "Виктор Потемкин",
       "age": 40,
       "team_id": 3,
       "photo": "14.png"
     },
     {
-      "name": "Aleksandr Homyakov",
+      "name": "Александр Хомяков",
       "age": 31,
       "team_id": 3,
       "photo": "15.png"
     },
     {
-      "name": "Valentina Tereshkova",
+      "name": "Валентина Терешкова",
       "age": 45,
       "team_id": 2,
       "photo": "28.png"
     },
     {
-      "name": "Maksim Petrov",
+      "name": "Максим Петров",
       "age": 29,
       "team_id": 3,
       "photo": "16.png"

@@ -18,17 +18,6 @@ def login_required(view):
 	return wrapped_view
 
 
-def admin_required(view):
-	@functools.wraps(view)
-	def wrapped_view(**kwargs):
-			if not g.is_admin:
-				abort(403)
-
-			return view(**kwargs)
-
-	return wrapped_view
-
-
 @bp.before_app_request
 def load_logged_in_user():
 	user_id = session.get("user_id")
@@ -37,7 +26,7 @@ def load_logged_in_user():
 	if user_id is None:
 			g.user = None
 	else:
-			g.user = (get_user_by_id(user_id)['id'])
+			g.user = (get_user_by_id(user_id))
 
 
 @bp.route('/login', methods=('GET', 'POST'))
@@ -54,6 +43,8 @@ def login():
 			error = 'Неверный пароль'
 
 		if error is None:
+			session.clear()
+			session['user_id'] = user['id']
 			return redirect(url_for('routing.admin_panel'))
 		flash(error)
 

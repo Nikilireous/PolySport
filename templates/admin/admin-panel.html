@@ -6,17 +6,90 @@
 <div class="header">
 	<nav class="second-nav">
 		<div class="dropdown">
-			<button class="dropbtn">Наши клубы
+			<button class="dropbtn">
+				<div class="text-icon"><p>Добавить</p><ion-icon name="add-circle-outline"></ion-icon></div>
 				<i class="fa fa-caret-down"></i>
 			</button>
 			<div class="dropdown-content">
-				<a href="{{ url_for('routing.football_page') }}">Футбол</a>
-				<a href="{{ url_for('routing.hockey_page') }}">Хоккей</a>
-				<a href="{{ url_for('routing.tennis_page') }}">Теннис</a>
-				<a href="{{ url_for('routing.volleyball_page') }}">Воллейбол</a>
-				<a href="{{ url_for('routing.basketball_page') }}">Баскетбол</a>
+				<a href="{{ url_for('routing.add_team') }}">Команда</a>
+				<a href="{{ url_for('routing.add_game') }}">Игра</a>
 			</div>
 		</div>
 	</nav>
+
+	<div class="header-content">
+		<div class="content-block" id="admin-content-block">
+			<div class="info rounded" id="teams">
+				<div class="text-icon">
+					<h3>Наши команды</h3>
+					<ion-icon name="accessibility-outline"></ion-icon>
+				</div>
+				<div class="panels">
+					{% if teams is defined and teams|length > 0 %}
+					{% for team in teams %}
+					<div class="panel">
+						<div class="panel-info">
+							<h3><a href="{{ url_for('routing.team_page', team_id=team['team_id']) }}">{{ team['team_name'] }}</a></h3>
+							<p>{{ team['year_formed'] }}</p>
+							<p>{{ team['city'] }}</p>
+						</div>
+						<div class="panel-buttons">
+							<a
+								class="button" id="see-user-tasks-button"
+								href="{{ url_for('routing.update_team', team_id=team['team_id']) }}">
+								Редактировать
+							</a>
+							<a
+								class="button delete"
+								id="delete-user-button"
+								href="{{ url_for('routing.delete_team', team_id=team['team_id']) }}">
+								Удалить
+							</a>
+						</div>
+					</div>
+					{% endfor %}
+					{% else %}
+					<p>Пусто</p>
+					{% endif %}
+				</div>
+			<div class="info rounded" id="games">
+				<div class="text-icon">
+					<h3>Игры</h3>
+					<ion-icon name="checkmark-done-outline"></ion-icon>
+				</div>
+				<div class="panels">
+					{% if games is defined and games|length > 0 %}
+					{% for game in games %}
+					<div class="panel">
+						<div class="panel-info">
+							<h3><a href="{{ url_for('routing.game_page', game_id=game['game_id']) }}">
+									{{ game['game_date'].strftime('%d.%m.%Y') }},
+									{{ game['location'] }}</a></h3>
+							<p>{{ game['game_date'].strftime('%d.%m.%Y') }}</p>
+							<p>{{ game['location'] }}</p>
+						</div>
+						<div class="panel-buttons">
+							<a
+								class="button" id="see-user-tasks-button"
+								href="{{ url_for('routing.update_game', game_id=game['game_id']) }}">
+								Редактировать
+							</a>
+							<a
+								class="button delete"
+								id="delete-user-button"
+								href="{{ url_for('routing.delete_game', game_id=game['game_id']) }}">
+								Удалить
+							</a>
+						</div>
+					</div>
+					{% endfor %}
+					{% else %}
+					<p>Пусто</p>
+					{% endif %}
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
 </div>
 {% endblock %}

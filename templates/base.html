@@ -31,8 +31,8 @@
 						<a href="{{ url_for('routing.basketball_page') }}">Баскетбол</a>
 					</div>
 				</div>
-				{% if request.path != "/" %}
-					<h2><a href="/"><ion-icon name ="home"></ion-icon>Главная</a></h2>
+				<h2><a href="/"><ion-icon name ="home"></ion-icon>Главная</a></h2>
+				{% if request.path == "/admin" %}
 					<h2><a href="{{ url_for('auth.logout') }}"><ion-icon name="log-out-outline"></ion-icon>Выйти</a></h2>
 				{% else %}
 					<h2><a href="{{ url_for('auth.login') }}"><ion-icon name="log-in-outline"></ion-icon>Войти</a></h2>

@@ -1,23 +1,23 @@
 {
   "awards": [
     {
-      "award_name": "Команда года",
+      "award_name": "Team of the year",
       "season_id": 1
     },
     {
-      "award_name": "Лучший нападающий",
+      "award_name": "Best team work",
       "season_id": 1
     },
     {
-      "award_name": "Самая популярная команда",
+      "award_name": "The most popular team",
       "season_id": 2
     },
     {
-      "award_name": "Тренер года",
+      "award_name": "Coach of the year",
       "season_id": 2
     },
     {
-      "award_name": "Самая быстрорастущая команда",
+      "award_name": "The most fast growing team",
       "season_id": 3
     }
   ]
