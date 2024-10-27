@@ -21,13 +21,15 @@ class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         for key in sorted(list(self.data.keys())):
             self.comboBox.addItem(key)
 
-        self.mainTable.cellDoubleClicked.connect(self.change_table)
+        self.mainTable.cellDoubleClicked.connect(self.update_row)
         self.comboBox.currentTextChanged.connect(self.box_change)
 
         self.team_words = ['team_name', 'team_id', 'team1_id', 'team2_id', 'winner_team_id', 'champion_team_id']
         self.game_words = ['game_id']
         self.judge_words = ['judge_id']
         self.season_words = ['season_id']
+        self.id_words = ['game_id', 'team_id', 'judge_id', 'team1_id', 'team2_id', 'winner_team_id', 'match_id',
+                         'result_id', 'participant_id', 'stat_id', 'history_id', 'score_id', 'season_id', 'award_id']
 
     def ui_create(self) -> None:
         self.mainTable.clear()
@@ -46,25 +48,23 @@ class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
                 self.mainTable.setCellWidget(x_coord, y_coord, label)
         self.mainTable.resizeColumnsToContents()
 
-    def change_table(self, x, y):
+    def update_row(self, x, y):
         data = self.data[self.correct_table]
         changing = list(data[0].keys())[y]
-        print(changing)
 
-        if str(changing) in self.team_words:
-            self.correct_table = 'teams'
+        if changing in self.id_words:
+            print(data[x][changing])
+            print(changing)
 
-        elif str(changing) in self.game_words:
-            self.correct_table = 'games'
+            id_type = QLabel()
+            id_type.setText(changing)
 
-        elif str(changing) in self.judge_words:
-            self.correct_table = 'judges'
+            id_value = QLabel()
+            id_value.setText(str(data[x][changing]))
 
-        elif str(changing) in self.season_words:
-            self.correct_table = 'seasons'
-
-        self.ui_create()
-
+            self.mainTable_2.setCellWidget(0, 0, id_type)
+            self.mainTable_2.setCellWidget(0, 1, id_value)
+            self.mainTable_2.resizeColumnsToContents()
 
     def box_change(self):
         self.correct_table = self.comboBox.currentText()
