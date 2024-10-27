@@ -40,6 +40,7 @@ class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         for x_coord, row in enumerate(data):
             for y_coord, cell in enumerate(row.values()):
                 label = QLabel()
+                label.setStyleSheet('color: black')
                 label.setText(str(cell))
 
                 self.mainTable.setCellWidget(x_coord, y_coord, label)
