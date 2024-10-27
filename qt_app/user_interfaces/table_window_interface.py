@@ -18,7 +18,9 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.mainTable = QtWidgets.QTableWidget(parent=self.centralwidget)
         self.mainTable.setGeometry(QtCore.QRect(15, 11, 871, 371))
-        self.mainTable.setStyleSheet("background-color: rgb(243, 243, 243);")
+        self.mainTable.setStyleSheet("background-color: rgb(243, 243, 243);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color: rgb(0, 0, 0);")
         self.mainTable.setObjectName("mainTable")
         self.mainTable.setColumnCount(0)
         self.mainTable.setRowCount(0)
@@ -26,14 +28,18 @@ class Ui_MainWindow(object):
         self.mainTable_2.setGeometry(QtCore.QRect(20, 510, 871, 81))
         self.mainTable_2.setStyleSheet("background-color: rgb(243, 243, 243);")
         self.mainTable_2.setObjectName("mainTable_2")
-        self.mainTable_2.setColumnCount(0)
-        self.mainTable_2.setRowCount(0)
+        self.mainTable_2.setStyleSheet("background-color: rgb(243, 243, 243);\n"
+                                     "color: rgb(0, 0, 0);\n"
+                                     "border-color: rgb(0, 0, 0);")
+        self.mainTable_2.setColumnCount(1)
+        self.mainTable_2.setRowCount(1)
+        self.mainTable_2.setHorizontalHeaderLabels(['id'])
         self.comboBox = QtWidgets.QComboBox(parent=self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(910, 10, 131, 31))
         self.comboBox.setObjectName("comboBox")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1062, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1062, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)

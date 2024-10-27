@@ -27,7 +27,9 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(243, 243, 243);</string>
+     <string notr="true">background-color: rgb(243, 243, 243);
+color: rgb(0, 0, 0);
+border-color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QTableWidget" name="mainTable_2">
@@ -60,7 +62,7 @@
      <x>0</x>
      <y>0</y>
      <width>1062</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
