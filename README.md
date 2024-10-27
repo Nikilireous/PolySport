@@ -1,4 +1,4 @@
-# Hakaton-Polytech-2024# <p style="text-align: center;">POLYSPORT</p>
+# Hakaton-Polytech-2024/POLYSPORT
 This project was made by a group of four fans of programming competitions as part of the hackathon "Polytechnic Challenge". This project is an example of DB+DBSM implementation within the framework of a website about sports teams, their matches and achievements. 
 This is a _**prototype**_ that can be improved in the future.
 ## Components
