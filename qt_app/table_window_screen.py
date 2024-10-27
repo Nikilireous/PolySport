@@ -18,7 +18,11 @@ class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         self.file = open('json_files/database.json', 'r')
         self.data = json.load(self.file)
 
+        for key in sorted(list(self.data.keys())):
+            self.comboBox.addItem(key)
+
         self.mainTable.cellDoubleClicked.connect(self.change_table)
+        self.comboBox.currentTextChanged.connect(self.box_change)
 
         self.team_words = ['team_name', 'team_id', 'team1_id', 'team2_id', 'winner_team_id', 'champion_team_id']
         self.game_words = ['game_id']
@@ -37,6 +41,7 @@ class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
             for y_coord, cell in enumerate(row.values()):
                 label = QLabel()
                 label.setText(str(cell))
+
                 self.mainTable.setCellWidget(x_coord, y_coord, label)
         self.mainTable.resizeColumnsToContents()
 
@@ -57,6 +62,11 @@ class TableWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         elif str(changing) in self.season_words:
             self.correct_table = 'seasons'
 
+        self.ui_create()
+
+
+    def box_change(self):
+        self.correct_table = self.comboBox.currentText()
         self.ui_create()
 
 
